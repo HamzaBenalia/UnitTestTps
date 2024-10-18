@@ -1,0 +1,14 @@
+dev\service\PlatServiceVersion1.class
+dev\ihm\Menu.class
+dev\dao\IPlatDao.class
+dev\App.class
+dev\exception\PlatException.class
+dev\ihm\options\OptionListerPlats.class
+dev\dao\PlatDaoMemoire.class
+dev\dao\PlatDaoFichier.class
+dev\service\IPlatService.class
+dev\ihm\options\OptionTerminer.class
+dev\entite\Plat.class
+dev\ihm\options\IOptionMenu.class
+dev\ihm\options\OptionAjouterPlat.class
+dev\service\PlatServiceVersion2.class
