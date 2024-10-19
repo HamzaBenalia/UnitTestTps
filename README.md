@@ -39,6 +39,17 @@ Ce projet est structuré en plusieurs branches, chacune représentant une étape
    git checkout cleanCode
    ```
 
+## Intégration Continue (CI)
+
+Nous avons mis en place un processus d'intégration continue (CI) pour automatiser le **build**, la **compilation**, les **tests** et le **packaging** des projets Mockito et Hamcrest. Ce processus utilise GitHub Actions pour exécuter les étapes suivantes :
+
+- **Compilation** : Compile le code source du projet.
+- **Tests** : Exécute tous les tests unitaires pour assurer la qualité du code.
+- **Packaging** : Crée le package du projet prêt à être déployé.
+
+### Projets concernés
+- **Mockito** : Les workflows CI s'exécutent sur la branche `mockito` pour garantir que toutes les modifications apportées à cette branche passent par le processus d'intégration continue.
+- **Hamcrest** : De même, un workflow CI est également mis en place pour la branche `hamcrest` afin d'assurer la même rigueur dans le développement.
 
 ## Prérequis
 Java 11+
