@@ -3,35 +3,30 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - '*'
+      - main
+      - mockito
+      - hamcrest
   pull_request:
     branches:
-      - '*'
+      - main
+      - mockito
+      - hamcrest
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Vérifier le code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Installer JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: '17' # Remplace par la version de Java que tu utilises
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17' 
 
-    - name: Compiler le projet
-      run: ./vnw clean compile 
+      - name: Build project
+        run: mvn clean package
 
-    - name: Exécuter les tests
-      run: ./mvn test 
-
-    - name: Package le projet
-      run: ./mvn package
-
-    - name: Archive les artefacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: CleanCode_tested
-        path: target/*.jar 
+      - name: Run tests
+        run: mvn test  t
