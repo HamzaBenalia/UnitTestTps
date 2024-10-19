@@ -3,14 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - main
       - mockito
-      - hamcrest
   pull_request:
     branches:
-      - main
       - mockito
-      - hamcrest
 
 jobs:
   build:
@@ -30,5 +26,4 @@ jobs:
       run: mvn clean package
 
     - name: Run tests
-      if: github.ref == 'refs/heads/mockito' || github.ref == 'refs/heads/hamcrest'
       run: mvn test
