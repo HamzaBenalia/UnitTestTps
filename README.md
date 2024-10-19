@@ -28,7 +28,7 @@ Ce projet est structuré en plusieurs branches, chacune représentant une étape
 
 1. Clonez le dépôt : 
    ```bash
-   git clone <url-de-votre-repo>
+   https://github.com/HamzaBenalia/UnitTestTps.git
    ```
 2. Changez de branche en utilisant la commande :
    ```bash
